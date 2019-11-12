@@ -1,4 +1,11 @@
 <?php 
+$host="localhost";
+$user="root";
+$passwd="yh19981021";
+$dbname="xxie66assign2db";
+
+$connect = mysqli_connect($host,$user,$passwd,$dbname);
+
 $query = "SELECT * FROM doctor, hospital WHERE doctor.hospitalcode=hospital.hospitalcode ORDER BY ";
 $order=$_GET['order'];
 if ($order == 'fname_asc'){
