@@ -10,7 +10,7 @@ include 'connectdb.php';
 ?>
 <h1>Welcome to Xiaoyu's Assignment3!</h1>
 <h2>Doctor Info</h2>
-<table align="left">
+<table>
   <thead>
     <tr>
       <th align="left">First Name<br>
