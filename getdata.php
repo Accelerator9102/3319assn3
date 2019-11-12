@@ -19,7 +19,7 @@ if ( !result ) {
 while ( $row = mysqli_fetch_assoc( $result ) ) {
   echo '<input type="radio" name="doctor" value="';
   echo $row["licensenum"];
-  echo '">' $row["fname"]." ".$row[ "lname" ]. "<br>";
+  echo '">'.$row["fname"]." ".$row[ "lname" ]. "<br>";
 }
 mysqli_free_result( $result );
 ?>
