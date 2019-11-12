@@ -29,11 +29,13 @@ include 'connectdb.php';
 <input type="submit" value="Get More Info">
 </form>
 
-<form action="assn3.php" method="post" >
+<form action="assn3.php" method="post" target="_self">
 	Select date: <input type="date" ><br>
 	<input type="submit" value="Submit!">
 </form>
 <?php 
+$date = $_POST();
+echo $date;
 mysqli_close($connect);
 ?>
 
