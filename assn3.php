@@ -37,6 +37,7 @@ if ( !result ) {
 }
 echo "<ol>";
 while ( $row = mysqli_fetch_assoc( $result ) ) {
+	var_dump($result);
   echo "<li>";
   echo $row[ "fname" ];
   echo '>' . $row[ "lname" ] . "<br>";
