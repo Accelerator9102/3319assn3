@@ -10,12 +10,12 @@ include 'connectdb.php';
 ?>
 <h1>Welcome to Xiaoyu's Assignment3!</h1>
 <h2>Doctor Info</h2>
-<table>
+<table align="left">
   <thead>
     <tr>
-      <th>First Name<br>
+      <th align="left">First Name<br>
         <a href="assn3.php?order=fname_asc"> <img src="arrow_down.png" width="25px" alt="Sort from A to Z"> </a> <a href="assn3.php?order=fname_dsc"> <img src="arrow_up.png" width="25px" alt="Sort from Z to A"> </a> </th>
-      <th>Last Name<br>
+      <th align="right">Last Name<br>
         <a href="assn3.php?order=lname_asc"> <img src="arrow_down.png" width="25px" alt="Sort from A to Z"> </a> <a href="assn3.php?order=lname_dsc"> <img src="arrow_up.png" width="25px" alt="Sort from Z to A"> </a> </th>
     </tr>
   </thead>
