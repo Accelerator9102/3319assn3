@@ -10,6 +10,10 @@ include 'connectdb.php';
  ?>
 	<h1>Welcome to Xiaoyu's Assignment3!</h1>
 	<h2>Doctor Info</h2>
+	<form action="getdata.php" method="post">
+	<?php 
+	include 'getdata.php';
+	 ?>
 	<table>
 		<thead>
 			<tr>
@@ -34,7 +38,5 @@ include 'connectdb.php';
 		<tbody>
 		</tbody>
 	</table>
-	<a href="getdata.php?order=fname_asc"></a>
-	
 </body>
 </html>
