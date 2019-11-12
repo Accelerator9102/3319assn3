@@ -39,7 +39,7 @@ echo "<ol>";
 while ( $row = mysqli_fetch_assoc( $result ) ) {
   echo "<li>";
   echo $row[ "fname" ];
-  echo '>' . $row[ "fname" ] . "<br>";
+  echo '>' . $row[ "lname" ] . "<br>";
 }
 mysqli_free_result( $result );
 ?>
