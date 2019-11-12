@@ -30,13 +30,13 @@ include 'connectdb.php';
 </form>
 
 <form name="form1" action="assn3.php" method="post">
-	Select date: <input type="date" name="d" value="0000-00-00"><br>
+	Select date: <input type="date" name="d" value=""><br>
 	<input type="submit" value="Submit!">
 </form>
 <?php 
 
 $date = $_POST['d'];
-if ($date!="0000-00-00") {
+if ($date!="") {
 
 	$query1='SELECT * FROM doctor WHERE doctor.datelicensed<"'.$date.'"';
 	$result1=mysqli_query($connect,$query1);
