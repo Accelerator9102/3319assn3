@@ -48,9 +48,9 @@ mysqli_free_result( $result );
   <thead>
     <tr>
       <th>First Name<br>
-        <a href="getdata.php?order=fname_asc"> <img src="arrow_down.png" alt="Sort from A to Z"> </a> <a href="getdata.php?order=fname_dsc"> <img src="arrow_up.png" alt="Sort from Z to A"> </a> </th>
+        <a href="assn3.php?order=fname_asc"> <img src="arrow_down.png" alt="Sort from A to Z"> </a> <a href="assn3.php?order=fname_dsc"> <img src="arrow_up.png" alt="Sort from Z to A"> </a> </th>
       <th>Last Name<br>
-        <a href="getdata.php?order=lname_asc"> <img src="arrow_down.png" alt="Sort from A to Z"> </a> <a href="getdata.php?order=lname_dsc"> <img src="arrow_up.png" alt="Sort from Z to A"> </a> </th>
+        <a href="assn3.php?order=lname_asc"> <img src="arrow_down.png" alt="Sort from A to Z"> </a> <a href="assn3.php?order=lname_dsc"> <img src="arrow_up.png" alt="Sort from Z to A"> </a> </th>
     </tr>
   </thead>
   <tbody>
