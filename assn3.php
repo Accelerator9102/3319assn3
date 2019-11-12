@@ -30,7 +30,8 @@ include 'connectdb.php';
 </form>
 
 <form action="assn3.php" method="post" >
-	<input type="date" >
+	Select date: <input type="date" ><br>
+	<input type="submit" value="Submit!">
 </form>
 <?php 
 mysqli_close($connect);
