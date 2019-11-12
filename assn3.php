@@ -28,6 +28,10 @@ include 'connectdb.php';
 ?>
 <input type="submit" value="Get More Info">
 </form>
+
+<form action="assn3.php" method="post" >
+	<input type="date" >
+</form>
 <?php 
 mysqli_close($connect);
 ?>
