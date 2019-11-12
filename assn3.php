@@ -34,7 +34,7 @@ include 'connectdb.php';
 	<input type="submit" value="Submit!">
 </form>
 <?php 
-$date = $_POST('d');
+$date = $_POST['d'];
 echo $date;
 mysqli_close($connect);
 ?>
