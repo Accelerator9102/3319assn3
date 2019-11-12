@@ -29,7 +29,7 @@ include 'connectdb.php';
 <input type="submit" value="Get More Info">
 </form>
 
-<form name="form1" action="assn3.php" method="post" target="_self">
+<form name="form1" action="assn3.php" method="post">
 	Select date: <input type="date" name="d" value=""><br>
 	<input type="submit" value="Submit!">
 </form>
