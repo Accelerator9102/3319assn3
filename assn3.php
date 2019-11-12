@@ -17,8 +17,8 @@ include 'connectdb.php';
         <a href="assn3.php?order=fname_asc"> <img src="arrow_down.png" width="25px" alt="Sort from A to Z"> </a> <a href="assn3.php?order=fname_dsc"> <img src="arrow_up.png" width="25px" alt="Sort from Z to A"> </a> </th><br>
       <th align="right">Last Name<br>
         <a href="assn3.php?order=lname_asc"> <img src="arrow_down.png" width="25px" alt="Sort from A to Z"> </a> <a href="assn3.php?order=lname_dsc"> <img src="arrow_up.png" width="25px" alt="Sort from Z to A"> </a> </th><br>
-    </tr>
-  </thead>
+    </tr><br>
+  </thead><br>
   <tbody>
   </tbody>
 </table><br>
