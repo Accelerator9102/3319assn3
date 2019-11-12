@@ -35,7 +35,7 @@ include 'connectdb.php';
 </form>
 <?php 
 $date = $_POST['d'];
-$query1="SELECT * FROM doctor WHERE doctor.datelicensed<"'.$date.'"";
+$query1='SELECT * FROM doctor WHERE doctor.datelicensed<"'.$date.'"';
 $result1=mysqli_query($connect,$query1);
 while ( $row1 = mysqli_fetch_assoc( $result1 ) ) {
   echo $row1["fname"]." ".$row1[ "lname" ]. " ".$row1["specialty"]." ".$row1["datelicensed"]."<br>";
