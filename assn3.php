@@ -11,7 +11,7 @@ $user = "root";
 $passwd = "yh19981021";
 $dbname = "xxie66assign2db";
 
-$connect = new mysqli_connect( $host, $user, $passwd, $dbname );
+$connect = mysqli_connect( $host, $user, $passwd, $dbname );
 ?>
 <h1>Welcome to Xiaoyu's Assignment3!</h1>
 <h2>Doctor Info</h2>
@@ -31,12 +31,12 @@ if ( $order == 'fname_asc' ) {
   $query .= 'lname DESC';
 }
 
-$result = $connect->query($query);
+$result = mysqli_query( $connect, $query );
 if ( !result ) {
   die( "query unsuccessful" );
 }
 echo "<ol>";
-while ( $row = $result->fetch_assoc() ) {
+while ( $row = mysqli_fetch_assoc( $result ) ) {
   echo "<li>";
   echo $row[ "fname" ];
   echo '>' . $row[ "fname" ] . "<br>";
