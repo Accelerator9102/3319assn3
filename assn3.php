@@ -21,7 +21,7 @@ include 'connectdb.php';
   </thead>
   <tbody>
   </tbody>
-</table>
+</table><br>
 <form action="getmoreinfo.php" method="post">
 <?php
 	include 'getdata.php';
