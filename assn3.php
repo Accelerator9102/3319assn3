@@ -15,7 +15,6 @@ $connect = mysqli_connect( $host, $user, $passwd, $dbname );
 ?>
 <h1>Welcome to Xiaoyu's Assignment3!</h1>
 <h2>Doctor Info</h2>
-<form action="getdata.php" method="post">
 <?php
 
 
