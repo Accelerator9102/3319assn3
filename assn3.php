@@ -98,13 +98,14 @@ $doctor_licensenum=$_POST["doctorlicensenum"];
 	if($existence==1){
 		echo "Doctor going to be deleted is currently treating a patient!"."<br>";
 		echo "continue?";
+		echo '<form action="assn3.php" method="get">
+		<input type="radio" name="deletedoc" value="yes">Of Course!
+		<input type="radio" name="deletedoc" value="no">Noooooo!
+		<input type="submit" value="Good to Go!">
+		</form>';
 	}
 ?>
-<form action="assn3.php" method="get">
-	<input type="radio" name="deletedoc" value="yes">Of Course!
-	<input type="radio" name="deletedoc" value="no">Noooooo!
-	<input type="submit" value="Good to Go!">
-</form>
+
 
 </body>
 </html>
