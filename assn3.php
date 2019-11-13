@@ -51,6 +51,7 @@ if ($date!="") {
 	<hr>
 </p>
 <h2>ADD A NEW DOCTOR</h2>
+
 <form action="addnewdoctor.php" method="post" target="_blank">
 	New Doctor's First Name: <input type="text" name="doctorfname"><br>
 	New Doctor's Last Name: <input type="text" name="doctorlname"><br>
@@ -66,7 +67,7 @@ if ($date!="") {
 		echo $row2["hospitalcode"];
 		echo '">'.$row2["name"]."in ".$row2["city"].", ".$row2["province"]."<br>";
 	} 
-	mysqli_close($connect);
+	
 	 ?>
 	 <input type="submit" value="Add New Doctor">
 
@@ -75,6 +76,7 @@ if ($date!="") {
 	<hr>
 </p>
 <h2>DELETE A DOCTOR</h2>
+
 <form action="deletedoctor.php" method="post">
 
 <select>
