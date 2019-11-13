@@ -102,12 +102,12 @@ $doctor_licensenum=$_POST["doctorlicensenum"];
 	if($existence==1){
 		echo "Doctor going to be deleted is currently treating a patient!"."<br>";
 		echo "continue?";
-		echo '<form action="assn3.php" method="get">
+		echo '<form action="assn3.php" method="post">
 		<input type="radio" name="deletedoc" value="yes">Of Course!
 		<input type="radio" name="deletedoc" value="no">Noooooo!
 		<input type="submit" value="Good to Go!">
 		</form>';
-		$decision=$_GET["deletedoc"];
+		$decision=$_POST["deletedoc"];
 		var_dump($decision);
 		echo $decision;
 		if($decision=="yes"){
