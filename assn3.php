@@ -110,7 +110,7 @@ $doctor_licensenum=$_POST["doctorlicensenum"];
 		$decision=$_POST["deletedoc"];
 		echo $decision;
 		if($decision=="yes"){
-			$query4='DELETE FROM doctor WHERE licensenum='.$doctor_licensenum;
+			$query4='DELETE FROM doctor WHERE licensenum='.'$doctor_licensenum';
 			if(!mysqli_query($connect,$query4)){
 				die("Deletion failed".mysqli_error($connect));
 			}
@@ -121,7 +121,7 @@ $doctor_licensenum=$_POST["doctorlicensenum"];
 		}
 		}
 	else if($existence==0){
-		$query4='DELETE FROM doctor WHERE licensenum='.$doctor_licensenum;
+		$query4='DELETE FROM doctor WHERE licensenum='.'$doctor_licensenum';
 		if(!mysqli_query($connect,$query4)){
 			die("Deletion failed".mysqli_error($connect));
 		}
