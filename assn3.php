@@ -62,8 +62,6 @@ if ($date!="") {
 	$query2="SELECT * FROM hospital";
 	$result2=mysqli_query($connect,$query2);
 	while($row2=mysqli_fetch_assoc($result2)){
-		var_dump($row2);
-		echo $row2;
 		echo '<input type="radio" name="hospitalname" value="';
 		echo $row2["hospitalcode"];
 		echo '">'.$row2["name"]."<br>";
