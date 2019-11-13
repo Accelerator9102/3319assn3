@@ -45,7 +45,7 @@ if ($date!="") {
 }
 }
 
-mysqli_close($connect);
+
 ?>
 <p>
 	<hr>
@@ -68,6 +68,7 @@ mysqli_close($connect);
 		echo $row2["hospitalcode"];
 		echo '">'.$row2["name"]."<br>";
 	} 
+	mysqli_close($connect);
 	 ?>
 
 </form>
