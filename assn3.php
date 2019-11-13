@@ -71,6 +71,17 @@ if ($date!="") {
 	 <input type="submit" value="Add New Doctor">
 
 </form>
+<p>
+	<hr>
+</p>
+<h2>DELETE A DOCTOR</h2>
+<form action="deletedoctor.php" method="post">
 
+<select>
+<?php 
+include 'getdoctorlist.php' ?>
+</select>
+<input type="submit" value="Delete Doctor">
+</form>
 </body>
 </html>
