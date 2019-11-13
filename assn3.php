@@ -86,7 +86,7 @@ include 'getdoctorlist.php' ?>
 <input type="submit" value="Delete Doctor">
 </form>
 <?php
-if (isset($_POST["deletedoc"])) {
+
 	$doctor_licensenum=$_POST["doctorlicensenum"];
 	$query3='SELECT * FROM treats';
 	$result=mysqli_query($connect,$query3);
@@ -100,6 +100,7 @@ if (isset($_POST["deletedoc"])) {
 			$existence=0;
 		}
 	}
+	
 	if($existence==1){
 		echo "Doctor going to be deleted is currently treating a patient!"."<br>";
 		echo "continue?";
@@ -108,6 +109,7 @@ if (isset($_POST["deletedoc"])) {
 		<input type="radio" name="deletedoc" value="no">Noooooo!
 		<input type="submit" value="Good to Go!">
 		</form>';
+		if(!empty($_POST["deletedoc"])){
 		$decision=$_POST["deletedoc"];
 		var_dump($decision);
 		echo $decision;
@@ -122,6 +124,7 @@ if (isset($_POST["deletedoc"])) {
 			echo "Deletion Cancelled";
 		}
 		}
+	}
 	else if($existence==0){
 		$query4="DELETE FROM doctor WHERE licensenum='".$doctor_licensenum."'";
 		if(!mysqli_query($connect,$query4)){
@@ -129,7 +132,7 @@ if (isset($_POST["deletedoc"])) {
 		}
 		echo "Doctor Deleted!";
 	}
-}
+
 
 	
 ?>
