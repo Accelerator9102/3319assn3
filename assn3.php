@@ -89,10 +89,14 @@ include 'getdoctorlist.php' ?>
 $doctor_licensenum=$_POST["doctorlicensenum"];
 	$query3='SELECT * FROM treats';
 	$result=mysqli_query($connect,$query3);
-	$existence=0;
+	$existence=-1;
 	while($row=mysqli_fetch_assoc($result)){
 		if($row["licensenum"]==$doctor_licensenum){
 			$existence=1;
+			break;
+		}
+		else{
+			$existence=0;
 		}
 	}
 	if($existence==1){
