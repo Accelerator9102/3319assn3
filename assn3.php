@@ -51,7 +51,7 @@ if ($date!="") {
 	<hr>
 </p>
 <h2>ADD A NEW DOCTOR</h2>
-<form action="addnewdoctor.php" method="post">
+<form action="addnewdoctor.php" method="post" target="_blank">
 	New Doctor's First Name: <input type="text" name="doctorfname"><br>
 	New Doctor's Last Name: <input type="text" name="doctorlname"><br>
 	New Doctor's License Number: <input type="text" name="doctorlicensenum"><br>
@@ -71,5 +71,6 @@ if ($date!="") {
 	 <input type="submit" value="Add New Doctor">
 
 </form>
+
 </body>
 </html>
