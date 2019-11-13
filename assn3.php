@@ -61,7 +61,7 @@ mysqli_close($connect);
 	<?php
 	$query2="SELECT * FROM hospital";
 	$result2=mysqli_query($connect,$query2);
-	while($row2=mysqli_fetch_assoc($result)){
+	while($row2=mysqli_fetch_assoc($result2)){
 		echo '<input type="radio" name="hospitalname" value="';
 		echo $row2["hospitalcode"];
 		echo '">'.$row2["name"]."<br>";
