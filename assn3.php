@@ -115,14 +115,14 @@ $doctor_licensenum=$_POST["doctorlicensenum"];
 			echo "Deletion Cancelled";
 		}
 		}
-		else if($existence==0){
-			$query4='DELETE FROM doctor WHERE licensenum='.$doctor_licensenum;
-			if(!mysqli_query($connect,$query4)){
-				die("Deletion failed".mysqli_error($connect));
-			}
-			echo "Doctor Deleted!";
+	else if($existence==0){
+		$query4='DELETE FROM doctor WHERE licensenum='.$doctor_licensenum;
+		if(!mysqli_query($connect,$query4)){
+			die("Deletion failed".mysqli_error($connect));
 		}
+		echo "Doctor Deleted!";
 	}
+	
 ?>
 
 
