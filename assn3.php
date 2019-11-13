@@ -68,6 +68,7 @@ if ($date!="") {
 	} 
 	mysqli_close($connect);
 	 ?>
+	 <input type="submit" value="Add New Doctor">
 
 </form>
 </body>
