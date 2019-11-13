@@ -17,12 +17,20 @@
 	 		$doctor_licensenum=$_POST["doctorlicensenum"];
 	 		$doctor_date_licensed=$_POST["doctordatelicensed"];
 	 		$doctor_hospital=$_POST["hospitalname"];
+	 		echo $doctor_hospital;
 	 		$query1='SELECT * FROM hospital';
 	 		$result=mysqli_query($connect,$query1);
 	 		if(!$result){
 	 			die("query failed");
 	 		}
-	 		$query='INSERT INTO doctor'
+	 		while($row=mysqli_fetch_assoc($result)){
+	 			if($doctor_hospital==$row["hospitalcode"]){
+	 				$hospital_name=$row["name"];
+	 			}
+	 		}
+	 		
+	 		
+	 		$query='INSERT INTO doctor';
 
 
 
