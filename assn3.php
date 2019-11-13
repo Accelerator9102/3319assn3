@@ -97,7 +97,7 @@ $doctor_licensenum=$_POST["doctorlicensenum"];
 	}
 	if($existence==1){
 		echo "Doctor going to be deleted is currently treating a patient!"."<br>";
-		echo "continue?"
+		echo "continue?";
 	}
 ?>
 <form action="assn3.php" method="get">
