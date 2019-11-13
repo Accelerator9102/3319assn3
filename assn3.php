@@ -108,6 +108,7 @@ $doctor_licensenum=$_POST["doctorlicensenum"];
 		<input type="submit" value="Good to Go!">
 		</form>';
 		$decision=$_GET["deletedoc"];
+		echo $decision;
 		if($decision=="yes"){
 			$query4='DELETE FROM doctor WHERE licensenum='.$doctor_licensenum;
 			if(!mysqli_query($connect,$query4)){
