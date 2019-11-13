@@ -44,8 +44,30 @@ if ($date!="") {
   		echo $row1["fname"]." ".$row1[ "lname" ]. " ".$row1["specialty"]." ".$row1["datelicensed"]."<br>";
 }
 }
+
 mysqli_close($connect);
 ?>
+<p>
+	<hr>
+</p>
+<h2>ADD A NEW DOCTOR</h2>
+<form action="addnewdoctor.php" method="get">
+	New Doctor's First Name: <input type="text" name="doctorfname"><br>
+	New Doctor's Last Name: <input type="text" name="doctorlname"><br>
+	New Doctor's License Number: <input type="text" name="doctorlicensenum"><br>
+	New Doctor's Specialty: <input type="text" name="doctorspecialty"><br>
+	New Doctor's Date Get License: <input type="text" name="doctordatelicensed"><br>
+	New Doctor's Hospital: <br>
+	<?php
+	$query2="SELECT * FROM hospital";
+	$result2=mysqli_query($connect,$query2);
+	while($row2=mysqli_fetch_assoc($result)){
+		echo '<input type="radio" name="hospitalname" value="';
+		echo $row2["hospitalcode"];
+		echo '">'.$row2["name"]."<br>";
+	} 
+	 ?>
 
+</form>
 </body>
 </html>
