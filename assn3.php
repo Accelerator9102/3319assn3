@@ -91,7 +91,7 @@ $doctor_licensenum=$_POST["doctorlicensenum"];
 	$result=mysqli_query($connect,$query1);
 	$existence=0;
 	while($row=mysqli_fetch_assoc($result)){
-		if($row["licensenum"]==$doctorlicensenum){
+		if($row["licensenum"]==$doctor_licensenum){
 			$existence=1;
 		}
 	}
