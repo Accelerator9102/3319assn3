@@ -87,8 +87,8 @@ include 'getdoctorlist.php' ?>
 </form>
 <?php
 $doctor_licensenum=$_POST["doctorlicensenum"];
-	$query='SELECT * FROM treats';
-	$result=mysqli_query($connect,$query1);
+	$query3='SELECT * FROM treats';
+	$result=mysqli_query($connect,$query3);
 	$existence=0;
 	while($row=mysqli_fetch_assoc($result)){
 		if($row["licensenum"]==$doctor_licensenum){
