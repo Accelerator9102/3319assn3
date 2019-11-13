@@ -64,7 +64,7 @@ if ($date!="") {
 	while($row2=mysqli_fetch_assoc($result2)){
 		echo '<input type="radio" name="hospitalname" value="';
 		echo $row2["hospitalcode"];
-		echo '">'.$row2["name"]."in ".$row2["city"].", ".$row2["province"].<br>";
+		echo '">'.$row2["name"]."in ".$row2["city"].", ".$row2["province"]."<br>";
 	} 
 	mysqli_close($connect);
 	 ?>
