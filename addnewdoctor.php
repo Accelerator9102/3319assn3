@@ -30,7 +30,13 @@
 	 		}
 	 		
 	 		
-	 		$query='INSERT INTO doctor';
+	 		$query='INSERT INTO doctor VALUES("'.$doctor_licensenum.'","'.$doctor_fname.'","'.$doctor_lname.'","'.$doctor_specialty.'","'.$doctor_date_licensed.'","'.$doctor_hospital.'")';
+	 		if(!mysqli_query($connect,$query)){
+	 			die("Insertion failed".mysqli_error($connect));
+	 		}
+	 		echo "New Doctor Added!";
+	 		mysqli_close($connect);
+
 
 
 
