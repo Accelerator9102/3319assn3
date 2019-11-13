@@ -86,7 +86,8 @@ include 'getdoctorlist.php' ?>
 <input type="submit" value="Delete Doctor">
 </form>
 <?php
-$doctor_licensenum=$_POST["doctorlicensenum"];
+if (isset($_POST["deletedoc"])) {
+	$doctor_licensenum=$_POST["doctorlicensenum"];
 	$query3='SELECT * FROM treats';
 	$result=mysqli_query($connect,$query3);
 	$existence=2;
@@ -128,6 +129,8 @@ $doctor_licensenum=$_POST["doctorlicensenum"];
 		}
 		echo "Doctor Deleted!";
 	}
+}
+
 	
 ?>
 
