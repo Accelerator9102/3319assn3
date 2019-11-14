@@ -107,7 +107,7 @@ include 'getdoctorlist.php' ?>
 			$existence=0;
 			echo $existence."success0";
 		}
-	
+	}
 	var_dump($existence==1);
 	if($existence==1){
 		echo $existence."success";
