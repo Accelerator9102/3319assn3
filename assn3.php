@@ -90,7 +90,8 @@ include 'getdoctorlist.php' ?>
 	$doctor_licensenum=$_POST["doctorlicensenumber"];
 	var_dump($doctor_licensenum);
 	echo $doctor_licensenum;
-	echo strcmp($doctor_licensenum,"None");
+	$equal=strcmp($doctor_licensenum,"None");
+	echo $equal;
 	if(strcmp($doctor_licensenum,"None")!=0){
 	$query3='SELECT * FROM treats';
 	$result=mysqli_query($connect,$query3);
