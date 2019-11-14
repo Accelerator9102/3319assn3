@@ -87,7 +87,7 @@ include 'getdoctorlist.php' ?>
 <input type="submit" value="Delete Doctor">
 </form>
 <?php
-	$doctor_licensenum=$_GET["doctorlicensenumber"];
+	$doctor_licensenum=$_POST["doctorlicensenumber"];
 	var_dump($doctor_licensenum);
 	echo $doctor_licensenum;
 	$equal=strcmp($doctor_licensenum,"None");
@@ -113,26 +113,12 @@ include 'getdoctorlist.php' ?>
 		echo $existence."success";
 		echo "Doctor going to be deleted is currently treating a patient!"."<br>";
 		echo "continue?";
-		echo '<form action="assn3.php?doctorlicensenumber='.$doctor_licensenum.'"'.' method="get" target="submitFrame">';
+		echo '<form action="deletedoctor.php" method="get" target="submitFrame">';
 		echo '<input type="radio" name="deletedoc" value="yes">Of Course!';
 		echo '<input type="radio" name="deletedoc" value="no">Noooooo!';
 		echo '<input type="submit" value="Good to Go!">';
 		echo '</form>';
-		if(!empty($_GET["deletedoc"])){
-		$decision=$_GET["deletedoc"];
-		var_dump($decision);
-		echo $decision;
-		if(strcmp($decision,"yes")){
-			$query4="DELETE FROM doctor WHERE licensenum='".$doctor_licensenum."'";
-			if(!mysqli_query($connect,$query4)){
-				die("Deletion failed".mysqli_error($connect));
-			}
-			echo "Doctor Deleted!";
-			}
-		else if(strcmp($decision,"no")==0){
-			echo "Deletion Cancelled";
-		}
-		}
+		include 'deletedoctor.php';
 	}
 	else if($existence==0){
 		$query4="DELETE FROM doctor WHERE licensenum='".$doctor_licensenum."'";
