@@ -130,7 +130,7 @@ include 'getdoctorlist.php' ?>
 		if(!mysqli_query($connect,$query4)){
 			die("Deletion failed".mysqli_error($connect));
 		}
-		echo "Doctor Deleted!";
+		echo "Doctor Deleted.";
 	}
 
 
