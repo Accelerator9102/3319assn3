@@ -100,12 +100,12 @@ include 'getdoctorlist.php' ?>
 	while($row=mysqli_fetch_assoc($result)){
 		if(strcmp($row["licensenum"],$doctor_licensenum)==0){
 			$existence=1;
-			echo $existence;
+			echo $existence."success1";
 			break;
 		}
 		else{
 			$existence=0;
-			echo $existence."success1";
+			echo $existence."success0";
 		}
 	
 	var_dump($existence==1);
