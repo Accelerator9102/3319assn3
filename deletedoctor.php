@@ -18,6 +18,6 @@ include 'connectdb.php';
 		}
 		}
 
-
+mysqli_close($connect);
 
  ?>
