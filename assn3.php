@@ -77,7 +77,7 @@ if ($date!="") {
 </p>
 <h2>DELETE A DOCTOR</h2>
 
-<form action="assn3.php" method="get">
+<form action="assn3.php" method="post" enctype="multipart/form-data">
 
 <select name="doctorlicensenumber">
 	<option selected="selected" value="None">Select Doctor: </option>
