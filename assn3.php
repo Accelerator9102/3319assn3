@@ -77,7 +77,7 @@ if ($date!="") {
 </p>
 <h2>DELETE A DOCTOR</h2>
 
-<form action="assn3.php" method="post">
+<form action="assn3.php" method="get">
 
 <select name="doctorlicensenumber">
 	<option selected="selected" value="None">Select Doctor: </option>
@@ -87,7 +87,7 @@ include 'getdoctorlist.php' ?>
 <input type="submit" value="Delete Doctor">
 </form>
 <?php
-	$doctor_licensenum=$_POST["doctorlicensenumber"];
+	$doctor_licensenum=$_GET["doctorlicensenumber"];
 	var_dump($doctor_licensenum);
 	echo $doctor_licensenum;
 	$equal=strcmp($doctor_licensenum,"None");
@@ -113,13 +113,13 @@ include 'getdoctorlist.php' ?>
 		echo $existence."success";
 		echo "Doctor going to be deleted is currently treating a patient!"."<br>";
 		echo "continue?";
-		echo '<form action="assn3.php" method="post" target="submitFrame">';
+		echo '<form action="assn3.php" method="get" target="submitFrame">';
 		echo '<input type="radio" name="deletedoc" value="yes">Of Course!';
 		echo '<input type="radio" name="deletedoc" value="no">Noooooo!';
 		echo '<input type="submit" value="Good to Go!">';
 		echo '</form>';
-		if(!empty($_POST["deletedoc"])){
-		$decision=$_POST["deletedoc"];
+		if(!empty($_GET["deletedoc"])){
+		$decision=$_GET["deletedoc"];
 		var_dump($decision);
 		echo $decision;
 		if(strcmp($decision,"yes")){
