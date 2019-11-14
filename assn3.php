@@ -77,7 +77,7 @@ if ($date!="") {
 </p>
 <h2>DELETE A DOCTOR</h2>
 
-<form action="assn3.php" method="get" target="submitFrame">
+<form action="assn3.php" method="get">
 
 <select name="doctorlicensenumber">
 	<option selected="selected" value="None">Select Doctor: </option>
@@ -113,7 +113,7 @@ include 'getdoctorlist.php' ?>
 		echo $existence."success";
 		echo "Doctor going to be deleted is currently treating a patient!"."<br>";
 		echo "continue?";
-		echo '<form action="assn3.php" method="post">';
+		echo '<form action="assn3.php" method="post" target="submitFrame">';
 		echo '<input type="radio" name="deletedoc" value="yes">Of Course!';
 		echo '<input type="radio" name="deletedoc" value="no">Noooooo!';
 		echo '<input type="submit" value="Good to Go!">';
@@ -147,6 +147,6 @@ include 'getdoctorlist.php' ?>
 
 ?>
 
-<iframe  id="submitFrame" style="display: none;width:0; height:0" name="submitFrame"  src="about:blank"></iframe>
+
 </body>
 </html>
