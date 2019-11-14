@@ -79,8 +79,8 @@ if ($date!="") {
 
 <form action="assn3.php" method="post">
 
-<select name="doctorlicensenum" >
-	<option selected="selected">Select Doctor: </option>
+<select>
+	<option selected="selected" value="None">Select Doctor: </option>
 <?php 
 include 'getdoctorlist.php' ?>
 </select>
