@@ -79,14 +79,15 @@ if ($date!="") {
 
 <form action="assn3.php" method="post">
 
-<select name="doctorlicensenum" value="Select a doctor">
+<select name="doctorlicensenum" >
+	<option selected="selected">Select Doctor: </option>
 <?php 
 include 'getdoctorlist.php' ?>
 </select>
 <input type="submit" value="Delete Doctor">
 </form>
 <?php
-
+	if(!empty($_POST["doctorlicensenum"])){
 	$doctor_licensenum=$_POST["doctorlicensenum"];
 	$query3='SELECT * FROM treats';
 	$result=mysqli_query($connect,$query3);
@@ -134,7 +135,7 @@ include 'getdoctorlist.php' ?>
 	}
 
 
-	
+	}
 ?>
 
 
