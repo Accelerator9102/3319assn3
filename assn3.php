@@ -110,6 +110,7 @@ include 'getdoctorlist.php' ?>
 	
 	
 	if($existence==1){
+		echo $existence."success";
 		echo "Doctor going to be deleted is currently treating a patient!"."<br>";
 		echo "continue?";
 		echo '<form action="assn3.php" method="post">';
