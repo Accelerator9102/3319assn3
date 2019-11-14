@@ -93,6 +93,8 @@ include 'getdoctorlist.php' ?>
 	if(strcmp($doctor_licensenum,"None")!=0){
 	$query3='SELECT * FROM treats';
 	$result=mysqli_query($connect,$query3);
+	var_dump($result);
+	echo $result;
 	$existence=2;
 	while($row=mysqli_fetch_assoc($result)){
 		if(strcmp($row["licensenum"],$doctor_licensenum)==0){
