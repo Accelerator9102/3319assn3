@@ -108,7 +108,7 @@ include 'getdoctorlist.php' ?>
 			echo $existence;
 		}
 	
-	
+	var_dump($existence==1);
 	if($existence==1){
 		echo $existence."success";
 		echo "Doctor going to be deleted is currently treating a patient!"."<br>";
