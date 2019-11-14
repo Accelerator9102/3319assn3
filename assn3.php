@@ -77,7 +77,7 @@ if ($date!="") {
 </p>
 <h2>DELETE A DOCTOR</h2>
 
-<form action="assn3.php" method="get">
+<form action="assn3.php" method="post">
 
 <select name="doctorlicensenumber">
 	<option selected="selected" value="None">Select Doctor: </option>
@@ -87,7 +87,7 @@ include 'getdoctorlist.php' ?>
 <input type="submit" value="Delete Doctor">
 </form>
 <?php
-	$doctor_licensenum=$_GET["doctorlicensenumber"];
+	$doctor_licensenum=$_POST["doctorlicensenumber"];
 	var_dump($doctor_licensenum);
 	echo $doctor_licensenum;
 	$equal=strcmp($doctor_licensenum,"None");
