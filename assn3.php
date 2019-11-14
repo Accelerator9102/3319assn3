@@ -87,7 +87,7 @@ include 'getdoctorlist.php' ?>
 <input type="submit" value="Delete Doctor">
 </form>
 <?php
-	if(!empty($_POST["doctorlicensenum"])){
+	
 	$doctor_licensenum=$_POST["doctorlicensenum"];
 	$query3='SELECT * FROM treats';
 	$result=mysqli_query($connect,$query3);
@@ -100,7 +100,7 @@ include 'getdoctorlist.php' ?>
 		else{
 			$existence=0;
 		}
-	}
+	
 	
 	if($existence==1){
 		echo "Doctor going to be deleted is currently treating a patient!"."<br>";
