@@ -90,12 +90,12 @@ include 'getdoctorlist.php' ?>
 	$doctor_licensenum=$_POST["doctorlicensenum"];
 	var_dump($doctor_licensenum);
 	echo $doctor_licensenum;
-	if($doctor_licensenum!="None"){
+	if(strcmp($doctor_licensenum,"None")==0){
 	$query3='SELECT * FROM treats';
 	$result=mysqli_query($connect,$query3);
 	$existence=2;
 	while($row=mysqli_fetch_assoc($result)){
-		if($row["licensenum"]==$doctor_licensenum){
+		if(strcmp($row["licensenum"],$doctor_licensenum)==0){
 			$existence=1;
 			break;
 		}
@@ -116,14 +116,14 @@ include 'getdoctorlist.php' ?>
 		$decision=$_POST["deletedoc"];
 		var_dump($decision);
 		echo $decision;
-		if($decision=="yes"){
+		if(strcmp($decision,"yes")){
 			$query4="DELETE FROM doctor WHERE licensenum='".$doctor_licensenum."'";
 			if(!mysqli_query($connect,$query4)){
 				die("Deletion failed".mysqli_error($connect));
 			}
 			echo "Doctor Deleted!";
 			}
-		else if($decision=="no"){
+		else if(strcmp($decision,"no")==0){
 			echo "Deletion Cancelled";
 		}
 		}
