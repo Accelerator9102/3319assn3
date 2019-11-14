@@ -86,9 +86,7 @@ include 'getdoctorlist.php' ?>
 </select>
 <input type="submit" value="Delete Doctor">
 </form>
-<?php 
-include 'deletedoctor.php';
- ?>
+
 <?php
 	$doctor_licensenum=$_POST["doctorlicensenumber"];
 	var_dump($doctor_licensenum);
@@ -116,12 +114,12 @@ include 'deletedoctor.php';
 		echo $existence."success";
 		echo "Doctor going to be deleted is currently treating a patient!"."<br>";
 		echo "continue?";
-		echo '<form action="deletedoctor.php" method="get" target="submitFrame">';
+		echo '<form action="deletedoctor.php" method="get">';
 		echo '<input type="radio" name="deletedoc" value="yes">Of Course!';
 		echo '<input type="radio" name="deletedoc" value="no">Noooooo!';
 		echo '<input type="submit" value="Good to Go!">';
 		echo '</form>';
-		
+		include 'deletedoctor.php';
 	}
 	else if($existence==0){
 		$query4="DELETE FROM doctor WHERE licensenum='".$doctor_licensenum."'";
