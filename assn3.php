@@ -76,7 +76,7 @@ if ($date!="") {
 	<hr>
 </p>
 <h2>DELETE A DOCTOR</h2>
-<iframe  id="submitFrame" style="display: none;width:0; height:0" name="submitFrame"  src="about:blank"></iframe>
+
 <form action="assn3.php" method="get" target="submitFrame">
 
 <select name="doctorlicensenumber">
@@ -147,6 +147,6 @@ include 'getdoctorlist.php' ?>
 
 ?>
 
-
+<iframe  id="submitFrame" style="display: none;width:0; height:0" name="submitFrame"  src="about:blank"></iframe>
 </body>
 </html>
