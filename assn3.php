@@ -105,11 +105,11 @@ include 'getdoctorlist.php' ?>
 	if($existence==1){
 		echo "Doctor going to be deleted is currently treating a patient!"."<br>";
 		echo "continue?";
-		echo '<form action="assn3.php" method="post">
-		<input type="radio" name="deletedoc" value="yes">Of Course!
-		<input type="radio" name="deletedoc" value="no">Noooooo!
-		<input type="submit" value="Good to Go!">
-		</form>';
+		echo '<form action="assn3.php" method="post">';
+		echo '<input type="radio" name="deletedoc" value="yes">Of Course!';
+		echo '<input type="radio" name="deletedoc" value="no">Noooooo!';
+		echo '<input type="submit" value="Good to Go!">';
+		echo '</form>';
 		if(!empty($_POST["deletedoc"])){
 		$decision=$_POST["deletedoc"];
 		var_dump($decision);
