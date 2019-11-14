@@ -79,7 +79,7 @@ if ($date!="") {
 
 <form action="assn3.php" method="post">
 
-<select name="doctorlicensenum">
+<select name="doctorlicensenumber">
 	<option selected="selected" value="None">Select Doctor: </option>
 <?php 
 include 'getdoctorlist.php' ?>
@@ -87,7 +87,7 @@ include 'getdoctorlist.php' ?>
 <input type="submit" value="Delete Doctor">
 </form>
 <?php
-	$doctor_licensenum=$_POST["doctorlicensenum"];
+	$doctor_licensenum=$_POST["doctorlicensenumber"];
 	var_dump($doctor_licensenum);
 	echo $doctor_licensenum;
 	if(strcmp($doctor_licensenum,"None")!=0){
