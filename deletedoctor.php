@@ -1,4 +1,5 @@
 <?php 
+include 'connect.php';
 	if(!empty($_GET["deletedoc"])){
 		$decision=$_GET["deletedoc"];
 		var_dump($decision);

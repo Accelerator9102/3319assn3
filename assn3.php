@@ -119,7 +119,7 @@ include 'getdoctorlist.php' ?>
 		echo '<input type="radio" name="deletedoc" value="no">Noooooo!';
 		echo '<input type="submit" value="Good to Go!">';
 		echo '</form>';
-		include 'deletedoctor.php';
+
 	}
 	else if($existence==0){
 		$query4="DELETE FROM doctor WHERE licensenum='".$doctor_licensenum."'";
