@@ -26,7 +26,7 @@
 	 		}
 	 		
 	 		
-             $query='UPDATE hospital SET name="'.$hospitalname.'", WHERE hospitalcode="'.$hospitalcode.'"';
+             $query='UPDATE hospital SET name="'.$hospitalname.'" WHERE hospitalcode="'.$hospitalcode.'"';
              echo $query;
 	 		if(!mysqli_query($connect,$query)){
 	 			die("Insertion failed".mysqli_error($connect));
