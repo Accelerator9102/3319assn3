@@ -168,7 +168,9 @@ include "connectdb.php";
 <?php
 	$query6="SELECT * FROM hospital ORDER BY name";
 	$result6=mysqli_query($connect,$query6);
+	
 	while($row6=mysqli_fetch_assoc($result6)){
+		echo $row6;
 		$ln=$row6["licensenum"];
 		echo $ln;
 		$query7 = 'SELECT * FROM doctor WHERE licensenum = "'.$ln.'"';
