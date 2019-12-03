@@ -149,7 +149,7 @@ include "connectdb.php";
 	while($row5=mysqli_fetch_assoc($result5)){
 		echo '<input type="radio" name="hospitalcode" value="';
 		echo $row5["hospitalcode"];
-		echo '">'.$row2["name"]."in ".$row2["city"].", ".$row2["province"]."<br>";
+		echo '">'.$row5["name"]." in ".$row5["city"].", ".$row5["province"]."<br>";
 	} 
 	
 	 ?>
