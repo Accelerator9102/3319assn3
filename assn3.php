@@ -168,6 +168,7 @@ include "connectdb.php";
 	while($row6=mysqli_fetch_assoc($result6)){
 		$query7 = 'SELECT * FROM doctor WHERE licensenum = "'.$row6["licensenum"].'"';
 		$result7=mysqli_query($connect,$query7);
+		$row7=mysqli_fetch_assoc($result7);
 		echo $row6["name"]." ".$row7["fname"]." ".$row7["lname"]." ".$row6["datebecamehead"]."<br>";
 		
 	} 
