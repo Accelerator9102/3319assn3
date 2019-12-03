@@ -170,6 +170,7 @@ include "connectdb.php";
 	$result6=mysqli_query($connect,$query6);
 	
 	while($row6=mysqli_fetch_assoc($result6)){
+		var_dump($row6);
 		echo $row6;
 		$ln=$row6["licensenum"];
 		echo $ln;
