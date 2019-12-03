@@ -162,6 +162,9 @@ include "connectdb.php";
 	<hr>
 </p>
 <h2>List of Hospital Heads</h2>
+<?php 
+include "connectdb.php";
+?>
 <?php
 	$query6="SELECT * FROM hospital ORDER BY name";
 	$result6=mysqli_query($connect,$query6);
