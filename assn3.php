@@ -138,7 +138,9 @@ include 'getdoctorlist.php' ?>
 	<hr>
 </p>
 <h2>UPDATE A HOSPITAL NAME</h2>
-
+<?php 
+include "connectdb.php";
+?>
 <form action="updatehospital.php" method="post" target="_blank">
 	New Hospital's Name: <input type="text" name="hospitalname"><br>
 	<?php
