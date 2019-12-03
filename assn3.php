@@ -158,5 +158,21 @@ include "connectdb.php";
 </form>
 
 
+<p>
+	<hr>
+</p>
+<h2>List of Hospital Heads</h2>
+<?php
+	$query6="SELECT * FROM hospital ORDER BY name";
+	$result6=mysqli_query($connect,$query6);
+	while($row6=mysqli_fetch_assoc($result6)){
+		$query7 = 'SELECT * FROM doctor WHERE licensenum = "'.$row6["licensenum"].'"';
+		$result7=mysqli_query($connect,$query7);
+		echo $row6["name"]." ".$row7["fname"]." ".$row7["lname"]." ".$row6["datebecamehead"]."<br>";
+		
+	} 
+	
+	 ?>
+
 </body>
 </html>
