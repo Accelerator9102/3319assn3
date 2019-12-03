@@ -134,6 +134,27 @@ include 'getdoctorlist.php' ?>
 
 ?>
 
+<p>
+	<hr>
+</p>
+<h2>UPDATE A HOSPITAL NAME</h2>
+
+<form action="updatehospital.php" method="post" target="_blank">
+	New Hospital's Name: <input type="text" name="hospitalname"><br>
+	<?php
+	$query5="SELECT * FROM hospital";
+	$result5=mysqli_query($connect,$query5);
+	while($row5=mysqli_fetch_assoc($result5)){
+		echo '<input type="radio" name="hospitalcode" value="';
+		echo $row5["hospitalcode"];
+		echo '">'.$row2["name"]."in ".$row2["city"].", ".$row2["province"]."<br>";
+	} 
+	
+	 ?>
+	 <input type="submit" value="Update Hospital">
+
+</form>
+
 
 </body>
 </html>
