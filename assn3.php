@@ -170,15 +170,13 @@ include "connectdb.php";
 	$result6=mysqli_query($connect,$query6);
 	
 	while($row6=mysqli_fetch_assoc($result6)){
-		var_dump($row6);
-		echo $row6;
 		$ln=$row6["licensenum"];
 		echo $ln;
 		$query7 = 'SELECT * FROM doctor WHERE licensenum = "'.$ln.'"';
 		$result7=mysqli_query($connect,$query7);
-		echo $query7;
+		
 		while($row7=mysqli_fetch_assoc($result7)){
-		echo $row6["name"]." ".$row7["fname"]." ".$row7["lname"]." ".$row6["datebecamehead"]."<br>";	
+		echo $row6["name"]." "." in ".$row6["city"].",".$row6["province"]." ".$row7["fname"]." ".$row7["lname"]." ".$row6["datebecamehead"]."<br>";	
 		}
 		
 		
@@ -186,5 +184,40 @@ include "connectdb.php";
 	
 	 ?>
 
+<p>
+	<hr>
+</p>
+<h2>Choose Patient</h2>
+<?php 
+include "connectdb.php";
+?>
+<form action="assn3.php" method="post">
+Patient's OHIP Number: <input type="text" name="ohipnumber"><br>
+	 <input type="submit" value="Patient Selected">
+
+</form>
+<?php
+	$query8="SELECT * FROM treats";
+	$result8=mysqli_query($connect,$query8);
+	
+	while($row8=mysqli_fetch_assoc($result8)){
+		$licensen=$row8["licensenum"];
+		$query9 = 'SELECT * FROM doctor WHERE licensenum = "'.$licensen.'"';
+		$result9=mysqli_query($connect,$query9);
+
+		$ohipn=$row8["OHIPnumber"];
+		$query10 = 'SELECT * FROM patient WHERE OHIPnumber = "'.$ohipn.'"';
+		$result10=mysqli_query($connect,$query10);
+		if(!($row9=mysqli_fetch_assoc($result9))&&($row10=mysqli_fetch_assoc($result10))){
+			echo "Error"."<br>";
+		}
+		while(($row9=mysqli_fetch_assoc($result9))&&($row10=mysqli_fetch_assoc($result10))){
+		echo $row10["fname"]." ".$row10["lname"]." treated by ".$row9["fname"]." ".$row9["lname"]."<br>";	
+		}
+		
+		
+	} 
+	
+	 ?>
 </body>
 </html>
