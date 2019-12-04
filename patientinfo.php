@@ -11,27 +11,28 @@
 	 <h1>Patient Info: </h1>
 	 <ol>
      <?php
-	$query8='SELECT * FROM treats WHERE OHIPnumber="'.$_POST["ohipnumber"].'"';
-    $result8=mysqli_query($connect,$query8);
-    echo $query8;
-	
-	while($row8=mysqli_fetch_assoc($result8)){
-        
-        echo $query8;
-		$licensen=$row8["licensenum"];
-        $query9 = 'SELECT * FROM doctor WHERE licensenum = "'.$licensen.'"';
-        echo $query9;
-		$result9=mysqli_query($connect,$query9);
+	$query='SELECT * FROM treats WHERE OHIPnumber="'.$_POST["ohipnumber"].'"';
+    $result=mysqli_query($connect,$query);
 
-		$ohipn=$row8["OHIPnumber"];
-        $query10 = 'SELECT * FROM patient WHERE OHIPnumber = "'.$ohipn.'"';
-        echo $query10;
-		$result10=mysqli_query($connect,$query10);
+	if(!$result){
+        die("query failed");
+    }
+	while($row=mysqli_fetch_assoc($result)){
+        
+
+		$licensen=$row["licensenum"];
+        $query1 = 'SELECT * FROM doctor WHERE licensenum = "'.$licensen.'"';
+
+		$result1=mysqli_query($connect,$query1);
+
+		$ohipn=$row["OHIPnumber"];
+        $query2 = 'SELECT * FROM patient WHERE OHIPnumber = "'.$ohipn.'"';
+
+		$result2=mysqli_query($connect,$query2);
 		
-        $row9=mysqli_fetch_assoc($result9);
-        $row10=mysqli_fetch_assoc($result10);
-            echo "successful";
-		echo $row10["fname"]." ".$row10["lname"]." treated by ".$row9["fname"]." ".$row9["lname"]."<br>";	
+        $row1=mysqli_fetch_assoc($result1);
+        $row2=mysqli_fetch_assoc($result2);
+		echo $row2["fname"]." ".$row2["lname"]." treated by ".$row1["fname"]." ".$row1["lname"]."<br>";	
 		
 		
 		
