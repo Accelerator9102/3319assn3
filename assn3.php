@@ -197,7 +197,7 @@ Patient's OHIP Number: <input type="text" name="ohipnumber"><br>
 
 </form>
 <?php
-	$query8='SELECT * FROM treats WHERE OHIPnumber="'.$_POST[ohipnumber].'"';
+	$query8='SELECT * FROM treats WHERE OHIPnumber="'.$_POST["ohipnumber"].'"';
 	$result8=mysqli_query($connect,$query8);
 	
 	while($row8=mysqli_fetch_assoc($result8)){
