@@ -12,15 +12,20 @@
 	 <ol>
      <?php
 	$query8='SELECT * FROM treats WHERE OHIPnumber="'.$_POST["ohipnumber"].'"';
-	$result8=mysqli_query($connect,$query8);
+    $result8=mysqli_query($connect,$query8);
+    echo $query8;
 	
 	while($row8=mysqli_fetch_assoc($result8)){
+        var_dump(query8);
+        echo $query8;
 		$licensen=$row8["licensenum"];
-		$query9 = 'SELECT * FROM doctor WHERE licensenum = "'.$licensen.'"';
+        $query9 = 'SELECT * FROM doctor WHERE licensenum = "'.$licensen.'"';
+        echo $query9;
 		$result9=mysqli_query($connect,$query9);
 
 		$ohipn=$row8["OHIPnumber"];
-		$query10 = 'SELECT * FROM patient WHERE OHIPnumber = "'.$ohipn.'"';
+        $query10 = 'SELECT * FROM patient WHERE OHIPnumber = "'.$ohipn.'"';
+        echo $query10;
 		$result10=mysqli_query($connect,$query10);
 		if(!($row9=mysqli_fetch_assoc($result9))&&($row10=mysqli_fetch_assoc($result10))){
 			echo "Error"."<br>";
