@@ -16,7 +16,7 @@
     echo $query8;
 	
 	while($row8=mysqli_fetch_assoc($result8)){
-        var_dump(query8);
+        
         echo $query8;
 		$licensen=$row8["licensenum"];
         $query9 = 'SELECT * FROM doctor WHERE licensenum = "'.$licensen.'"';
@@ -31,6 +31,7 @@
 			echo "Error"."<br>";
 		}
 		while(($row9=mysqli_fetch_assoc($result9))&&($row10=mysqli_fetch_assoc($result10))){
+            echo "successful";
 		echo $row10["fname"]." ".$row10["lname"]." treated by ".$row9["fname"]." ".$row9["lname"]."<br>";	
 		}
 		
