@@ -12,7 +12,7 @@
 
 		);
 	}else{
-		echo "connection successful!";
+		echo "connection successful!"."<br>";
 	}
 
 
