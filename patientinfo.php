@@ -27,13 +27,12 @@
         $query10 = 'SELECT * FROM patient WHERE OHIPnumber = "'.$ohipn.'"';
         echo $query10;
 		$result10=mysqli_query($connect,$query10);
-		if(!($row9=mysqli_fetch_assoc($result9))&&($row10=mysqli_fetch_assoc($result10))){
-			echo "Error"."<br>";
-		}
-		while(($row9=mysqli_fetch_assoc($result9))&&($row10=mysqli_fetch_assoc($result10))){
+		
+        $row9=mysqli_fetch_assoc($result9);
+        $row10=mysqli_fetch_assoc($result10);
             echo "successful";
 		echo $row10["fname"]." ".$row10["lname"]." treated by ".$row9["fname"]." ".$row9["lname"]."<br>";	
-		}
+		
 		
 		
 	} 
