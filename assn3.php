@@ -204,7 +204,7 @@ Patient's OHIP Number: <input type="text" name="ohipnumber"><br>
 <?php
 
 	include "connectdb.php";
-	echo "<br";
+	
 	$query8="SELECT * FROM doctor WHERE doctor.licensenum NOT IN (SELECT licensenum FROM treats)";
 	$result8=mysqli_query($connect,$query8);
 	if(!result8){
